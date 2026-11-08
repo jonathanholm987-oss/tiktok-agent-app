@@ -1,0 +1,48 @@
+[
+ {
+  "id": "202611091130-726ad5",
+  "status": "preview",
+  "created_at": "2026-11-08T19:57:39.000Z",
+  "due_at": "2026-11-09T11:30:00.000Z",
+  "product_id": "DEMO000001",
+  "product_name": "Beispiel Kabel-Organizer",
+  "category": "Schreibtisch",
+  "research_query": null,
+  "format": "fuer_wen",
+  "hook": "Für alle, die Kabelsalat am Schreibtisch kennen",
+  "caption": "Werbung | Der Kabel-Organizer gegen Kabelsalat am Schreibtisch.\n\nLink in Bio, Produkt Nr. 1. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.\n\n#werbung #anzeige #amazonfinds #gadgets #schreibtisch",
+  "title": "Für alle, die Kabelsalat am Schreibtisch kennen",
+  "generator": "fallback",
+  "images": [
+   "01.jpg",
+   "02.jpg",
+   "03.jpg",
+   "04.jpg",
+   "05.jpg",
+   "06.jpg"
+  ]
+ },
+ {
+  "id": "202611091730-76cd2e",
+  "status": "preview",
+  "created_at": "2026-11-08T19:57:39.000Z",
+  "due_at": "2026-11-09T17:30:00.000Z",
+  "product_id": "DEMO000001",
+  "product_name": "Beispiel Kabel-Organizer",
+  "category": "Schreibtisch",
+  "research_query": null,
+  "format": "gruende",
+  "hook": "4 Gründe für der Kabel-Organizer",
+  "caption": "Werbung | Der Kabel-Organizer gegen Kabelsalat am Schreibtisch.\n\nLink in Bio, Produkt Nr. 1. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.\n\n#werbung #anzeige #amazonfinds #gadgets #schreibtisch",
+  "title": "4 Gründe für der Kabel-Organizer",
+  "generator": "fallback",
+  "images": [
+   "01.jpg",
+   "02.jpg",
+   "03.jpg",
+   "04.jpg",
+   "05.jpg",
+   "06.jpg"
+  ]
+ }
+]
