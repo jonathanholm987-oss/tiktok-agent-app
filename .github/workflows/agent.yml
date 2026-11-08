@@ -1,0 +1,76 @@
+name: TikTok Agent
+
+on:
+  schedule:
+    - cron: "41 3 * * *"   # täglich morgens; plant die Posts der nächsten 24 Stunden
+  workflow_dispatch:
+
+concurrency:
+  group: tiktok-agent
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      AMAZON_CREDENTIAL_ID: ${{ secrets.AMAZON_CREDENTIAL_ID }}
+      AMAZON_CREDENTIAL_SECRET: ${{ secrets.AMAZON_CREDENTIAL_SECRET }}
+      BUFFER_CHANNEL_ID: ${{ vars.BUFFER_CHANNEL_ID }}
+      LIVE_POSTING: ${{ vars.LIVE_POSTING }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - run: python -m pytest -q
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Analysieren
+        run: python -m agent analyze
+
+      - name: Slideshows erstellen
+        run: python -m agent create
+        env:
+          SITE_BASE_URL: ${{ steps.pages.outputs.base_url }}
+
+      - name: Link-Seite bauen
+        run: python -m agent site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Über Buffer einplanen
+        run: python -m agent publish
+        env:
+          SITE_BASE_URL: ${{ steps.pages.outputs.base_url }}
+
+      - name: Zustand speichern
+        if: always()
+        run: |
+          git config user.name "tiktok-agent"
+          git config user.email "tiktok-agent@users.noreply.github.com"
+          git add state reports site
+          git diff --cached --quiet || git commit -m "Agent: Lauf vom $(date -u +%F)"
+          git push
