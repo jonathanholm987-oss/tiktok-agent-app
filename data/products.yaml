@@ -1,0 +1,39 @@
+# Deine Produktliste. Der Agent verwendet nur die Fakten, die hier stehen.
+#
+# nr:       feste Nummer, unter der das Produkt auf deiner Link-Seite steht
+# asin:     10-stellige Amazon-ASIN aus der Produkt-URL
+# problem:  kurze Formulierung, die in "Schluss mit ..." passt
+# facts:    3 bis 6 geprüfte Fakten aus der Produktbeschreibung, keine Preise
+# image:    optional, Pfad zu einem Bild, das du verwenden darfst
+#           (eigenes Foto oder Herstellerbild mit Erlaubnis, kein kopiertes Amazon-Bild)
+# demo:     true = nur für die Vorschau; wird niemals live gepostet
+#
+# Die beiden Einträge unten sind erfundene Beispiele. Ersetze sie durch echte Produkte.
+
+products:
+  - nr: 1
+    asin: DEMO000001
+    demo: true
+    name: Beispiel Kabel-Organizer
+    short: Der Kabel-Organizer
+    category: Schreibtisch
+    problem: Kabelsalat am Schreibtisch
+    audience: Leute, die im Homeoffice arbeiten
+    facts:
+      - Hält 5 Kabel an der Tischkante
+      - Klebt ohne Bohren
+      - Silikon, lässt sich abwischen
+      - Kabel lassen sich einzeln herausnehmen
+
+  - nr: 2
+    asin: DEMO000002
+    demo: true
+    name: Beispiel LED-Schrankleuchte
+    short: Die Schrankleuchte
+    category: Zuhause
+    problem: dunkle Kleiderschränke
+    audience: Leute mit wenig Licht im Flur oder Schrank
+    facts:
+      - Schaltet sich per Bewegungssensor ein
+      - Haftet magnetisch
+      - Wird per USB-C geladen

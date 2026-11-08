@@ -1,0 +1,61 @@
+# Einstellungen des TikTok-Agenten.
+# Geheime Schlüssel gehören NICHT hierher, sondern in die GitHub-Secrets.
+
+timezone: Europe/Berlin
+
+publish:
+  # Live-Posting wird über die GitHub-Variable LIVE_POSTING=true eingeschaltet.
+  # Solange das fehlt, erstellt der Agent nur Vorschauen.
+  # automatic = Buffer postet selbst
+  # notification = Erinnerung in der Buffer-App, du postest in TikTok selbst
+  scheduling_type: automatic
+  posting_times: ["12:30", "18:30"]
+  min_lead_minutes: 30
+  max_slides: 7             # Buffer erlaubt bis zu 10 Bilder pro TikTok-Post
+  keep_slides_days: 14      # danach werden alte Bilder aus dem Repo gelöscht
+
+amazon:
+  domain: amazon.de
+  associate_tag: ""         # z. B. deinname-21
+
+legal:
+  # Pflicht für Live-Posting: Impressum deiner Link-Seite, eine Zeile pro Angabe.
+  # Achtung: Das Repository und die Seite sind öffentlich.
+  impressum: ""
+
+site:
+  title: "Meine Produktfunde"
+  intro: "Die Nummer aus dem TikTok-Post findest du hier."
+
+content:
+  model: claude-sonnet-5-5
+  product_cooldown_days: 7
+  exploration: 0.25         # Anteil der Posts, die bewusst Neues ausprobieren
+  base_hashtags: [werbung, anzeige, amazonfinds, gadgets]
+
+research:
+  query_cooldown_days: 3
+  max_searches_per_post: 4
+  # Startideen für die automatische Suche. Claude ergänzt wöchentlich weitere.
+  # "problem" muss in den Satz "Schluss mit ..." passen.
+  seeds:
+    - {query: "Kabelhalter selbstklebend Schreibtisch", problem: "Kabelsalat am Schreibtisch", short: "Der Kabelhalter", category: Schreibtisch, audience: "Leute im Homeoffice"}
+    - {query: "Monitorerhöhung Schublade", problem: "wenig Platz auf dem Schreibtisch", short: "Die Monitorerhöhung", category: Schreibtisch, audience: "Leute im Homeoffice"}
+    - {query: "Bewegungsmelder LED Schrankleuchte magnetisch", problem: "dunklen Kleiderschränken", short: "Die Schrankleuchte", category: Zuhause, audience: "Leute mit dunklen Fluren"}
+    - {query: "Vakuum Kleiderbeutel Handpumpe", problem: "überfüllten Koffern", short: "Der Vakuumbeutel", category: Reisen, audience: "Vielreisende"}
+    - {query: "Packwürfel Set Koffer", problem: "Chaos im Koffer", short: "Die Packwürfel", category: Reisen, audience: "Vielreisende"}
+    - {query: "Gewürzregal ausziehbar Schrank", problem: "Chaos im Gewürzschrank", short: "Das Gewürzregal", category: Küche, audience: "Leute, die oft kochen"}
+    - {query: "Topfdeckel Halter Küche", problem: "herumfliegenden Topfdeckeln", short: "Der Deckelhalter", category: Küche, audience: "Leute mit kleiner Küche"}
+    - {query: "Spülbecken Organizer Schwammhalter", problem: "Unordnung an der Spüle", short: "Der Spülen-Organizer", category: Küche, audience: "Leute mit kleiner Küche"}
+    - {query: "Autositz Lückenfüller Organizer", problem: "Dingen, die neben den Sitz fallen", short: "Der Lückenfüller", category: Auto, audience: "Autofahrer"}
+    - {query: "Kofferraum Organizer faltbar", problem: "Chaos im Kofferraum", short: "Der Kofferraum-Organizer", category: Auto, audience: "Autofahrer"}
+    - {query: "Handy Halterung Auto Lüftung", problem: "dem Handy auf dem Beifahrersitz", short: "Die Handyhalterung", category: Auto, audience: "Autofahrer"}
+    - {query: "Bohrstaub Fänger Bohren", problem: "Bohrstaub in der Wohnung", short: "Der Staubfänger", category: Werkzeug, audience: "Heimwerker"}
+    - {query: "Wandhaken selbstklebend ohne Bohren", problem: "Löchern in der Mietwohnung", short: "Die Klebehaken", category: Zuhause, audience: "Leute zur Miete"}
+    - {query: "Duschablage ohne Bohren", problem: "Flaschen auf dem Wannenrand", short: "Die Duschablage", category: Bad, audience: "Leute zur Miete"}
+    - {query: "Schuhregal schmal platzsparend", problem: "Schuhen im Flur", short: "Das Schuhregal", category: Zuhause, audience: "Leute mit kleinem Flur"}
+    - {query: "Tablet Ständer verstellbar Küche", problem: "dem Tablet, das ständig umkippt", short: "Der Tabletständer", category: Technik, audience: "Leute, die gern streamen"}
+
+analysis:
+  min_age_hours: 48         # jüngere Posts werden noch nicht bewertet
+  stop_after_days: 14       # danach werden Zahlen nicht mehr aktualisiert
