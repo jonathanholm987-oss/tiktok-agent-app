@@ -1,9 +1,31 @@
 [
  {
-  "id": "202611121130-2d3ee6",
+  "id": "202611131130-2e0dc4",
   "status": "preview",
-  "created_at": "2026-11-12T04:31:36.000Z",
-  "due_at": "2026-11-12T11:30:00.000Z",
+  "created_at": "2026-11-13T04:33:31.000Z",
+  "due_at": "2026-11-13T11:30:00.000Z",
+  "product_id": "DEMO000002",
+  "product_name": "Beispiel LED-Schrankleuchte",
+  "category": "Zuhause",
+  "research_query": null,
+  "format": "kleine_loesung",
+  "hook": "Kleine Lösung gegen dunkle Kleiderschränke",
+  "caption": "Werbung | Die Schrankleuchte gegen dunkle Kleiderschränke.\n\nLink in Bio, Produkt Nr. 2. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.\n\n#werbung #anzeige #amazonfinds #gadgets #zuhause",
+  "title": "Kleine Lösung gegen dunkle Kleiderschränke",
+  "generator": "fallback",
+  "images": [
+   "01.jpg",
+   "02.jpg",
+   "03.jpg",
+   "04.jpg",
+   "05.jpg"
+  ]
+ },
+ {
+  "id": "202611131730-6df904",
+  "status": "preview",
+  "created_at": "2026-11-13T04:33:31.000Z",
+  "due_at": "2026-11-13T17:30:00.000Z",
   "product_id": "DEMO000001",
   "product_name": "Beispiel Kabel-Organizer",
   "category": "Schreibtisch",
@@ -12,29 +34,6 @@
   "hook": "Schluss mit Kabelsalat am Schreibtisch",
   "caption": "Werbung | Der Kabel-Organizer gegen Kabelsalat am Schreibtisch.\n\nLink in Bio, Produkt Nr. 1. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.\n\n#werbung #anzeige #amazonfinds #gadgets #schreibtisch",
   "title": "Schluss mit Kabelsalat am Schreibtisch",
-  "generator": "fallback",
-  "images": [
-   "01.jpg",
-   "02.jpg",
-   "03.jpg",
-   "04.jpg",
-   "05.jpg",
-   "06.jpg"
-  ]
- },
- {
-  "id": "202611121730-701869",
-  "status": "preview",
-  "created_at": "2026-11-12T04:31:36.000Z",
-  "due_at": "2026-11-12T17:30:00.000Z",
-  "product_id": "DEMO000001",
-  "product_name": "Beispiel Kabel-Organizer",
-  "category": "Schreibtisch",
-  "research_query": null,
-  "format": "gruende",
-  "hook": "4 Gründe für der Kabel-Organizer",
-  "caption": "Werbung | Der Kabel-Organizer gegen Kabelsalat am Schreibtisch.\n\nLink in Bio, Produkt Nr. 1. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.\n\n#werbung #anzeige #amazonfinds #gadgets #schreibtisch",
-  "title": "4 Gründe für der Kabel-Organizer",
   "generator": "fallback",
   "images": [
    "01.jpg",
