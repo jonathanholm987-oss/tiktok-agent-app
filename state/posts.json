@@ -1,32 +1,9 @@
 [
  {
-  "id": "202611261130-d36585",
+  "id": "202611271130-7d5b5b",
   "status": "preview",
-  "created_at": "2026-11-26T04:41:12.000Z",
-  "due_at": "2026-11-26T11:30:00.000Z",
-  "product_id": "DEMO000001",
-  "product_name": "Beispiel Kabel-Organizer",
-  "category": "Schreibtisch",
-  "research_query": null,
-  "format": "kleine_loesung",
-  "hook": "Kleine Lösung gegen Kabelsalat am Schreibtisch",
-  "caption": "Werbung | Der Kabel-Organizer gegen Kabelsalat am Schreibtisch.\n\nLink in Bio, Produkt Nr. 1. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.\n\n#werbung #anzeige #amazonfinds #gadgets #schreibtisch",
-  "title": "Kleine Lösung gegen Kabelsalat am Schreibtisch",
-  "generator": "fallback",
-  "images": [
-   "01.jpg",
-   "02.jpg",
-   "03.jpg",
-   "04.jpg",
-   "05.jpg",
-   "06.jpg"
-  ]
- },
- {
-  "id": "202611261730-b39e57",
-  "status": "preview",
-  "created_at": "2026-11-26T04:41:12.000Z",
-  "due_at": "2026-11-26T17:30:00.000Z",
+  "created_at": "2026-11-27T04:40:02.000Z",
+  "due_at": "2026-11-27T11:30:00.000Z",
   "product_id": "DEMO000002",
   "product_name": "Beispiel LED-Schrankleuchte",
   "category": "Zuhause",
@@ -42,6 +19,29 @@
    "03.jpg",
    "04.jpg",
    "05.jpg"
+  ]
+ },
+ {
+  "id": "202611271730-d77a03",
+  "status": "preview",
+  "created_at": "2026-11-27T04:40:02.000Z",
+  "due_at": "2026-11-27T17:30:00.000Z",
+  "product_id": "DEMO000001",
+  "product_name": "Beispiel Kabel-Organizer",
+  "category": "Schreibtisch",
+  "research_query": null,
+  "format": "gruende",
+  "hook": "4 Gründe für der Kabel-Organizer",
+  "caption": "Werbung | Der Kabel-Organizer gegen Kabelsalat am Schreibtisch.\n\nLink in Bio, Produkt Nr. 1. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.\n\n#werbung #anzeige #amazonfinds #gadgets #schreibtisch",
+  "title": "4 Gründe für der Kabel-Organizer",
+  "generator": "fallback",
+  "images": [
+   "01.jpg",
+   "02.jpg",
+   "03.jpg",
+   "04.jpg",
+   "05.jpg",
+   "06.jpg"
   ]
  }
 ]
